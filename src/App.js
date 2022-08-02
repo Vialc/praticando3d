@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import Spline from "@splinetool/react-spline";
+import './App.css'
 
-function App() {
+import Logo from "./assets/logo.svg";
+import linkedin from './assets/linkedin-square-logo-24.png'
+import github from './assets/github-logo-24.png'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="wrapper">
+      <Spline
+        className="spline"
+        scene="https://prod.spline.design/k99HVzraHEeIFQii/scene.splinecode"
+      />
+      <div className="social">
+        <div />
+      </div>
+      <div className="content">
+        <ul className="menu">
+          <li>
+            <img src={Logo} alt="title" />
+          </li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Download</a>
+          </li>
+          <li>
+            <a href="/">App</a>
+          </li>
+          <li>
+            <a href="/">Login</a>
+          </li>
+          <li>
+            <button>Começar Agora</button>
+          </li>
+        </ul>
+        <h1>Cada clique, um sentimento.</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Chame os seus amigos e venha viver essa experiência épica
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
-
-export default App;
+;
